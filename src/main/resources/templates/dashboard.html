@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="app-shell">
+    <aside th:replace="~{fragments/sidebar :: sidebar}"></aside>
+    <div class="main-area">
+        <header th:replace="~{fragments/topbar :: topbar}"></header>
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="table-card" style="padding: 32px;">
+                <p style="color: var(--color-text-muted);">
+                    Chào mừng <strong>admin</strong>. Sử dụng menu bên trái để truy cập các chức năng quản lý.
+                </p>
+                <p style="color: var(--color-text-muted); margin-top: 12px;">
+                    Các bảng dữ liệu hiện có thể trống — bạn có thể thêm dữ liệu qua các REST API ở <code>/api/&lt;entity&gt;</code>.
+                </p>
+            </div>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>

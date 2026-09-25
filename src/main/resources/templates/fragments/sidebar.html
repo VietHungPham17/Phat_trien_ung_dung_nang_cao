@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="${title} + ' — School API'">School API</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+
+<aside class="sidebar" th:fragment="sidebar">
+    <div class="sidebar-brand">
+        <img th:src="@{/images/logo.png}" alt="VNU"/>
+        <div class="sidebar-brand-text">
+            <h1>QUẢN LÝ MÔN HỌC</h1>
+            <p>VÀ ĐÁNH GIÁ CHUẨN ĐẦU RA</p>
+        </div>
+    </div>
+    <ul class="sidebar-menu">
+        <li th:each="item : ${menuItems}"
+            th:classappend="${activeMenu == item.key} ? 'active' : ''">
+            <a th:href="@{${item.url()}}">
+                <span class="menu-icon" th:text="${item.icon()}"></span>
+                <span th:text="${item.label()}"></span>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+</body>
+</html>

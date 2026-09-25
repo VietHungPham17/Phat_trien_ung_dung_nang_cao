@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/sidebar :: head(title='Trang chủ')}"></head>
+<body>
+<div class="landing-shell">
+    <div th:replace="~{fragments/landing-topbar :: landing-topbar}"></div>
+    <div class="landing-hero">
+        <h2>Hệ thống Quản lý Môn học &amp; Chuẩn đầu ra</h2>
+        <p>Nền tảng quản trị toàn diện cho niên khóa, khung chương trình, môn học, phòng học, giảng viên, sinh viên và đánh giá chuẩn đầu ra của Trường Đại học Việt Nhật (VNU-Japan).</p>
+        <a class="landing-cta" th:href="@{/dashboard}">
+            Vào hệ thống
+            <span aria-hidden="true">→</span>
+        </a>
+    </div>
+</div>
+</body>
+</html>

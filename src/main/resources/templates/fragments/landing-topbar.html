@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="landing-topbar" class="landing-topbar">
+    <div class="landing-brand">
+        <img th:src="@{/images/logo.png}" alt="VNU"/>
+        <div class="landing-brand-text">
+            <h1>QUẢN LÝ MÔN HỌC</h1>
+            <p>VÀ ĐÁNH GIÁ CHUẨN ĐẦU RA</p>
+        </div>
+    </div>
+    <div class="landing-topbar-right">
+        <div class="topbar-pill">
+            <span class="pill-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </span>
+            <span>VI</span>
+            <span class="caret">▾</span>
+        </div>
+        <div class="topbar-pill">
+            <span class="pill-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </span>
+            <span>admin</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
