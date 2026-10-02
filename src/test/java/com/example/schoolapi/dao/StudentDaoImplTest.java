@@ -34,7 +34,6 @@ class StudentDaoImplTest {
 
     private StudentDaoImpl studentDaoImpl;
     private Student mathStudent;
-    private Student csStudent;
 
     @BeforeEach
     void setUp() {
@@ -42,7 +41,6 @@ class StudentDaoImplTest {
         studentDaoImpl.setEntityManager(entityManager);
 
         mathStudent = new Student("Mathematics", "Alice");
-        csStudent = new Student("Computer Science", "Charlie");
     }
 
     // ==================== Custom Query Method Tests ====================

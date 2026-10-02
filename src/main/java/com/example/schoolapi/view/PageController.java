@@ -1,6 +1,5 @@
 package com.example.schoolapi.view;
 
-import com.example.schoolapi.dto.*;
 import com.example.schoolapi.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

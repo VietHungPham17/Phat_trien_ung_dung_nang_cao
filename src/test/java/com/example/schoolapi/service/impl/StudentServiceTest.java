@@ -6,7 +6,6 @@ import com.example.schoolapi.dto.StudentResponse;
 import com.example.schoolapi.entity.Student;
 import com.example.schoolapi.exception.NotFoundException;
 import com.example.schoolapi.mapper.StudentMapper;
-import com.example.schoolapi.service.StudentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

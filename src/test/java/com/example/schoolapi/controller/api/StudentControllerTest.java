@@ -5,7 +5,6 @@ import com.example.schoolapi.dto.StudentResponse;
 import com.example.schoolapi.exception.GlobalExceptionHandler;
 import com.example.schoolapi.exception.NotFoundException;
 import com.example.schoolapi.service.StudentService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
