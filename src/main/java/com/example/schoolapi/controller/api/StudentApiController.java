@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 /**
  * REST Controller for Student API endpoints.
@@ -33,6 +35,16 @@ public class StudentApiController {
     public List<StudentResponse> list(
             @RequestParam(defaultValue = "false") boolean includeInactive) {
         return studentService.findAll(includeInactive);
+    }
+
+    /**
+     * GET /api/students/paged - List all students with pagination and sorting.
+     */
+    @GetMapping("/paged")
+    public Page<StudentResponse> listPaged(
+            @RequestParam(defaultValue = "false") boolean includeInactive,
+            Pageable pageable) {
+        return studentService.findAllPaged(includeInactive, pageable);
     }
 
     /**

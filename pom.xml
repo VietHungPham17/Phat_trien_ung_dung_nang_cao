@@ -83,6 +83,13 @@
 			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- AWS SDK v2 for Cloudflare R2 (S3 Compatible API) -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>2.25.11</version>
+		</dependency>
 	</dependencies>
 
 	<build>

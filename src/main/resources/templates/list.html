@@ -12,12 +12,13 @@
                 <h1 th:text="${pageTitle}">Tiêu đề trang</h1>
                 <div class="actions-bar">
                     <button type="button" class="btn btn-primary">
-                        <span aria-hidden="true">＋</span>
+                        <span aria-hidden="true">+</span>
                         <span>Thêm mới</span>
                     </button>
                     <button type="button" class="btn btn-outline">
-                        <span aria-hidden="true">↓</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         <span>Xuất file</span>
+                        <span aria-hidden="true">▾</span>
                     </button>
                 </div>
             </div>
@@ -25,9 +26,10 @@
             <div class="search-bar">
                 <div class="search-input-wrap">
                     <input type="text" class="search-input"
-                           th:placeholder="'Tìm kiếm theo ' + ${#strings.toLowerCase(pageTitle)} + '...'"/>
+                           th:placeholder="'Tìm kiếm theo tên niên khóa, mô tả, năm...'"/>
                 </div>
                 <button type="button" class="btn btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
                     <span>Tìm kiếm nâng cao</span>
                     <span aria-hidden="true">▾</span>
                 </button>
@@ -59,11 +61,11 @@
                             </td>
                             <td class="text-center">
                                 <button type="button" class="btn btn-icon" title="Chỉnh sửa">
-                                    <span aria-hidden="true">✎</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
                                     <span>Chỉnh sửa</span>
                                 </button>
                                 <button type="button" class="btn btn-icon btn-icon-danger" title="Xóa">
-                                    <span aria-hidden="true">🗑</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
                                 </button>
                             </td>
                         </tr>

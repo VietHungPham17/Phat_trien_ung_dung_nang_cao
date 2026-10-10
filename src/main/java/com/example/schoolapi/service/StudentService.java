@@ -4,6 +4,8 @@ import com.example.schoolapi.dto.StudentRequest;
 import com.example.schoolapi.dto.StudentResponse;
 
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 /**
  * Service interface for Student operations.
@@ -16,6 +18,11 @@ public interface StudentService {
      * Get all students (active only or all based on parameter).
      */
     List<StudentResponse> findAll(boolean includeInactive);
+
+    /**
+     * Get all students with pagination and sorting.
+     */
+    Page<StudentResponse> findAllPaged(boolean includeInactive, Pageable pageable);
 
     /**
      * Get student by ID.

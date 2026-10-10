@@ -1,4 +1,4 @@
-# School Management API & Chuẩn Đầu Ra (CDR)
+# School Management API & Chuẩn Đầu Ra 
 
 Dự án Hệ thống Quản lý Trường Học được xây dựng dựa trên kiến trúc 3 lớp (3-Tier Architecture) hiện đại. Hệ thống cung cấp cả giao diện Web (Thymeleaf) theo thiết kế tối giản và các API (RESTful) để phục vụ cho các nền tảng khác.
 

@@ -6,8 +6,8 @@
 :root {
     --color-primary: #A2AAB6;
     --color-primary-light: #C5CCD6;
-    --color-primary-dark: #7A8290;
-    --color-primary-deep: #4A515E;
+    --color-primary-dark: #1A202C;
+    --color-primary-deep: #2D3748;
 
     --color-bg: #F5F7FA;
     --color-card: #FFFFFF;
@@ -17,7 +17,7 @@
     --color-border: #E2E8F0;
     --color-border-strong: #CBD5E0;
 
-    --color-table-header: #A2AAB6;
+    --color-table-header: #8A92A6;
     --color-table-header-text: #FFFFFF;
     --color-row-hover: #F0F3F7;
 
@@ -99,7 +99,7 @@ button {
 .sidebar-brand-text h1 {
     font-size: 13px;
     font-weight: 700;
-    color: var(--color-primary-deep);
+    color: var(--color-text);
     letter-spacing: 0.3px;
     line-height: 1.2;
 }
@@ -125,10 +125,11 @@ button {
     align-items: center;
     gap: 12px;
     padding: 10px 14px;
-    border-radius: var(--radius-sm);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     color: var(--color-text);
     font-size: 13px;
     transition: background 0.15s, color 0.15s;
+    border-left: 4px solid transparent;
 }
 
 .sidebar-menu a:hover {
@@ -136,21 +137,31 @@ button {
 }
 
 .sidebar-menu li.active a {
-    background: var(--color-primary);
-    color: #fff;
-    font-weight: 500;
+    background: #EBF4FF;
+    color: #2B6CB0;
+    font-weight: 600;
+    border-left: 4px solid #2B6CB0;
+}
+
+.sidebar-menu .menu-text {
+    flex: 1;
+}
+
+.sidebar-menu .menu-caret {
+    font-size: 10px;
+    color: var(--color-text-muted);
 }
 
 .sidebar-menu .menu-icon {
     width: 18px;
     text-align: center;
     font-size: 16px;
-    color: var(--color-primary);
+    color: var(--color-text-muted);
     flex-shrink: 0;
 }
 
 .sidebar-menu li.active .menu-icon {
-    color: #fff;
+    color: #2B6CB0;
 }
 
 /* ========== MAIN AREA ========== */
@@ -171,7 +182,34 @@ button {
     align-items: center;
     justify-content: flex-end;
     padding: 0 24px;
-    gap: 12px;
+    gap: 16px;
+}
+
+.lang-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    transition: background 0.15s;
+}
+
+.lang-selector:hover {
+    background: var(--color-row-hover);
+}
+
+.lang-selector .flag-icon {
+    width: 20px;
+    border-radius: 2px;
+}
+
+.lang-selector .caret {
+    font-size: 10px;
+    color: var(--color-text-muted);
 }
 
 .topbar-pill {
@@ -293,10 +331,11 @@ button {
     gap: 12px;
     margin-bottom: 18px;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .search-input-wrap {
-    flex: 1;
+    width: 340px;
     position: relative;
 }
 

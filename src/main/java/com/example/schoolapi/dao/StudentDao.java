@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 /**
  * DAO interface for Student entity.
@@ -21,6 +23,11 @@ public interface StudentDao extends JpaRepository<Student, Long>, StudentDaoCust
      * Find all active students ordered by ID.
      */
     List<Student> findByActiveTrueOrderByIdAsc();
+
+    /**
+     * Find all active students with pagination and sorting.
+     */
+    Page<Student> findByActiveTrue(Pageable pageable);
 
     /**
      * Find student by ID if active.

@@ -20,8 +20,9 @@
         <li th:each="item : ${menuItems}"
             th:classappend="${activeMenu == item.key} ? 'active' : ''">
             <a th:href="@{${item.url()}}">
-                <span class="menu-icon" th:text="${item.icon()}"></span>
-                <span th:text="${item.label()}"></span>
+                <span class="menu-icon" th:utext="${item.icon()}"></span>
+                <span class="menu-text" th:text="${item.label()}"></span>
+                <span th:if="${item.hasSubmenu()}" class="menu-caret" aria-hidden="true">▾</span>
             </a>
         </li>
     </ul>
